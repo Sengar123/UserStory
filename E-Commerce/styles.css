@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.form {
+    display: none;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc; /* Border for the form */
+    border-radius: 10px; /* Rounded corners */
+    background-color: white;
+    max-width: 400px; /* Limit the form width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for a card-like appearance */
+}
+
+.bal{
+    max-width: 400px; 
+}
+.table{
+    display: none;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc; /* Border for the form */
+    border-radius: 10px; /* Rounded corners */
+    background-color: white;
+    max-width: 700px; /* Limit the form width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea, select {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 90%;
+}
+
+button {
+    padding: 10px;
+    background-color: #2831a7;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#historyTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+#welcomeMessage {
+    background-color: #f0f8ff; /* Light background */
+    border: 1px solid #a0d3f7; /* Light border */
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: none; /* Hide initially */
+}
+#historyTable th, #historyTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#historyTable th {
+    background-color: #f2f2f2;
+}
+
+button[disabled] {
+    background-color: grey;
+    cursor: not-allowed;
+}

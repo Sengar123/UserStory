@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+               
+                <li><a href="#" id="registerLink">Register</a></li>
+                <li><a href="#" id="loginLink">Login</a></li>
+                <li><a href="#" id="servicesLink">Services</a></li>
+                <li><a href="#" id="historyLink">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="welcomeMessage">
+        <h1>Welcome to the Service Booking System!</h1>
+        <p>Your one-stop solution for all your service needs.</p>
+    </div>
+
+    <div id="content">
+        <!-- Registration Form -->
+        <div id="registrationForm" class="form">
+            <h2>Register</h2>
+            
+            <!-- Username Field with Label -->
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Username" maxlength="50">
+            </div>
+        
+            <!-- Email Field with Label -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Email">
+            </div>
+        
+            <!-- Password Field with Label -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Password" maxlength="30">
+            </div>
+        
+            <!-- Address Field with Label -->
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" placeholder="Street, City (Max 100 chars)" maxlength="100"></textarea>
+            </div>
+        
+            <!-- Contact Number Field with Label -->
+            <div class="form-group">
+                <label for="contact">Contact Number:</label>
+                <input type="text" id="contact" placeholder="Contact Number" maxlength="10">
+            </div>
+        
+            <!-- Register Button -->
+            <button id="registerBtn">Register</button>
+        </div>
+        
+         <!-- Registration Acknowledgment -->
+         <div id="registrationAck" class="acknowledgment" style="display: none;">
+            <h3 style="color: green;">User Registration Successful!</h3>
+            <p id="ackUserId"></p>
+            <p id="ackUsername"></p>
+            <p id="ackEmail"></p>
+        </div>
+
+        <!-- Login Form -->
+        <div id="loginForm" class="form">
+            <h2>Login</h2>
+            
+            <!-- User ID Field with Label -->
+            <div class="form-group">
+                <label for="loginUserId">User ID:</label>
+                <input type="text" id="loginUserId" placeholder="User ID">
+            </div>
+        
+            <!-- Password Field with Label -->
+            <div class="form-group">
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" placeholder="Password">
+            </div>
+        
+            <!-- Login Button -->
+            <button id="loginBtn">Login</button>
+        </div>
+        
+
+        <!-- Service Booking Page -->
+       <div id="servicesPage" class="form">
+    <h2>Book a Service</h2>
+    <div class="form-group">
+    <label for="serviceType">Service Type:</label>
+    <select id="serviceType">
+        <option value="AC Repair">AC Repair</option>
+        <option value="TV Repair">TV Repair</option>
+        <option value="Fridge Repair">Fridge Repair</option>
+        <option value="Washing Machine Repair">Washing Machine Repair</option>
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="serviceDate">Preferred Date:</label>
+    <input type="date" id="serviceDate">
+        </div>
+
+        <div class="form-group">
+    <label for="serviceSlot">Time Slot:</label>
+    <select id="serviceSlot">
+        <option value="9AM-11AM">9AM-11AM</option>
+        <option value="11AM-1PM">11AM-1PM</option>
+        <option value="1PM-3PM">1PM-3PM</option>
+        <option value="3PM-5PM">3PM-5PM</option>
+    </select>
+        </div>
+        <div class="form-group">
+    <label for="serviceAddress">Service Address:</label>
+    <textarea id="serviceAddress" placeholder="Street, City (Max 100 chars)" maxlength="100"></textarea>
+        </div>
+        <div class="form-group">
+    <label for="serviceVendor">Choose Vendor:</label>
+    <select id="serviceVendor">
+        <option value="Vendor 1">Vendor 1</option>
+        <option value="Vendor 2">Vendor 2</option>
+        <option value="Vendor 3">Vendor 3</option>
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="serviceAmount">Service Amount:</label>
+    <input type="text" id="serviceAmount" value="100" readonly>
+    </div>
+    <button id="bookServiceBtn">Book Service</button>
+</div>
+
+<!-- Service Booking Acknowledgment -->
+<div id="serviceAck" class="acknowledgment" style="display: none;">
+    <h3 style="color: green;">Service Booked Successfully!</h3>
+    <p id="ackServiceId"></p>
+    <p id="ackVendor"></p>
+    <p id="ackServiceType"></p>
+</div>
+
+        <!-- Booking History -->
+        <div id="historyPage" class="table">
+            <h2>Service History</h2>
+            <table id="historyTable">
+                <thead>
+                    <tr>
+                        <th>User ID </th>
+                        <th>Username </th>
+                        <th>Service ID</th>
+                        <th>Date</th>
+                        <th>Slot</th>
+                        <th>Type of Service</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="historyBody"></tbody>
+            </table>
+            <br>
+            <button id="prevPageBtn">Prev</button>
+            <button id="nextPageBtn">Next</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
